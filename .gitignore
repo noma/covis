@@ -1,0 +1,8 @@
+thirdparty/include/tiny_obj_loader.h
+thirdparty/lib
+thirdparty/tinyobjloader/build/
+cosim/build
+covis/build
+cosim/cl/integrate_eom_kernel.h
+data/*.png
+
