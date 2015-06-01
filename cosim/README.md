@@ -7,28 +7,26 @@ Please see the [LICENSE](LICENSE) file. If in doubt please contact the authors.
 ## Dependencies
 
 Install the thirdparty modules to load polyhedral comet models in
-[wavefront OBJ format][http://en.wikipedia.org/wiki/Wavefront_.obj_file].
+[wavefront OBJ format](http://en.wikipedia.org/wiki/Wavefront_.obj_file).
 
-Build [tinyobjloader][https://github.com/syoyo/tinyobjloader]:
-
-	```
-	cd thirdparty/tinyobjloader
-	mkdir -p build
-	cd build
-	cmake -DCMAKE_INSTALL_PREFIX=../../ ..
-	make install
-	```
+Build [tinyobjloader](https://github.com/syoyo/tinyobjloader):
+```
+cd thirdparty/tinyobjloader
+mkdir -p build
+cd build
+cmake -DCMAKE_INSTALL_PREFIX=../../ ..
+make install
+```
 
 ## Project
 
 Build cosim and oclinfo:
-
-	```
-	mkdir -p build
-	cd build
-	cmake ..
-	make
-	```
+```
+mkdir -p build
+cd build
+cmake ..
+make
+```
 
 # Running
 
@@ -59,10 +57,9 @@ DELTA_T                   | integration time-step in s
 Run cosim with a config file specified as the first command line argument. If
 no argument is given, "config.cfg" is tried. We assume cosim to be the working
 directory:
-
-	```
-	build/cosim [config_file]
-	```
+```
+build/cosim [config_file]
+```
 
 Computations involving 20,000 triangular faces and 20,0000 particles require
 modern accelerator (GPGPU or Xeon Phi) hardware with high double precision
@@ -75,10 +72,9 @@ of trajectories and check the results.
 
 For comparable values, we added a benchmark.cfg for generating comparable 
 performance results. The current OpenCL kernel is not yet optimised.
-
-	```
-	build/cosim benchmark.cfg
-	```
+```
+build/cosim benchmark.cfg
+```
 
 ## Generated Output Data
 
@@ -95,4 +91,3 @@ re-collided with the surface.
 # Analysis
 
 The obtained data can be visualised with the covis programme.
-
