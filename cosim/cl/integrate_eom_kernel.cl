@@ -172,7 +172,7 @@ __global Real_t *thetasum,
          g.x+=(+2.0*omega*vold[m].y+pold[m].x*omega*omega);
          g.y+=(-2.0*omega*vold[m].x+pold[m].y*omega*omega);
          vnew[m]=vold[m]+g*dt;
-         pnew[m]=pold[m]+vnew[m]+g*dt*dt*0.5;
+         pnew[m]=pold[m]+vnew[m]*dt+g*dt*dt*0.5;
       }
       else // we re-collided with the comet, do not update position, but mask vel.w as a hit (1.0)
       {
